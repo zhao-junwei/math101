@@ -1,0 +1,34 @@
+<!doctype html>
+<head>
+<script>
+function check(){
+var name=document.myform.name.value;
+var age=document.myform.age.value;
+document.getElementById
+("d1").style.display="";
+document.getElementById
+("d2").style.display="none";
+document.getElementById
+("d1").innerHTML="name:"+name+"<br>age:"+age;
+}
+document.getElementById("but").onclick = check;
+</script>
+</head>>
+<title>Math Training</title>
+<tr class=page>
+  <h1>Math 101</h1>
+  <form id="form" method="post">
+    <table>
+      {% for q, r in questions.iteritems() %}
+      <tr>
+        <td>{{ q }} =</td>
+        <td><input type="text" name="inputs[]"></td>
+        <td><input type="hidden" name="results[]" value="{{ r }}"></td>
+      </tr>
+      {% endfor %}
+    </table>
+  <input type="button" id="reset" value="RESET";>
+  <input type="button" id="submit" value="SUBMIT";>
+  </form>
+  {% block body %}{% endblock %}
+</div>
